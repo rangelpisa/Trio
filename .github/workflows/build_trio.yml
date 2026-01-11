@@ -328,6 +328,8 @@ jobs:
           FASTLANE_ISSUER_ID: ${{ secrets.FASTLANE_ISSUER_ID }}
           FASTLANE_KEY: ${{ secrets.FASTLANE_KEY }}
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          MATCH_READONLY: false        # <--- AÑADE ESTA LÍNEA
+          ENABLE_NUKE_CERTS: true      # <--- AÑADE ESTA LÍNEA
 
       # Upload to TestFlight
       - name: Fastlane upload to TestFlight
